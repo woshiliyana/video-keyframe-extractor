@@ -45,7 +45,8 @@ export default function Home() {
       setKeyframes(data.keyframes || []);
       setLoading(false);
     } catch (error) {
-      console.error('Error:', error);
+      console.error('上传失败:', error);
+      setError('上传过程中发生错误');
       setLoading(false);
     }
   };
@@ -63,6 +64,7 @@ export default function Home() {
       document.body.removeChild(a);
       window.URL.revokeObjectURL(url);
     } catch (error) {
+      console.error('下载失败:', error);
       setError('下载过程中发生错误');
     }
   };
