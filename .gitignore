@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+.venv/
+frontend/node_modules/
+frontend/.next/
+backend/venv/
+
+# Build outputs
+.next/
+build/
+dist/
+
+# Cache
+__pycache__/
+*.pyc
+.DS_Store
+backend/__pycache__/
+
+# Runtime files
+uploads/
+output/
+temp/
+backend/uploads/
+backend/output/
+backend/temp/
+*.mp4
+*.zip
+*.mov
+
+# Environment
+.env
+.env.local
+
+# Large directories
+backend/data/
+frontend/public/videos/
