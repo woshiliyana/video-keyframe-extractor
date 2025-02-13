@@ -41,16 +41,11 @@ export default function Home() {
         method: 'POST',
         body: formData,
       });
-
       const data = await response.json();
-      if (data.success) {
-        setKeyframes(data.keyframes);
-      } else {
-        setError(data.message || '处理失败');
-      }
-    } catch (err) {
-      setError('上传或处理过程中发生错误');
-    } finally {
+      setKeyframes(data.keyframes || []);
+      setLoading(false);
+    } catch (error) {
+      console.error('Error:', error);
       setLoading(false);
     }
   };
