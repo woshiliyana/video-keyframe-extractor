@@ -62,7 +62,7 @@ export default function Home() {
       a.click();
       document.body.removeChild(a);
       window.URL.revokeObjectURL(url);
-    } catch (err) {
+    } catch (error) {
       setError('下载过程中发生错误');
     }
   };
